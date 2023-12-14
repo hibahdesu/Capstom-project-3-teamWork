@@ -64,19 +64,19 @@ st.markdown(image_html, unsafe_allow_html=True)
 import streamlit as st
 
 
-V2 = st.sidebar.number_input(
-    "Select the value of V2",
-    -5.00, 6.00, step=0.1,
-    key="V2",
-    help="Select the value of V2"
-)
+# V2 = st.sidebar.number_input(
+#     "Select the value of V2",
+#     -5.00, 6.00, step=0.1,
+#     key="V2",
+#     help="Select the value of V2"
+# )
 
-V3 = st.sidebar.number_input(
-    "Select the value of V3",
-    -10.00, 10.00, step=0.1,
-    key="V3",
-    help="Select the value of V3"
-)
+# V3 = st.sidebar.number_input(
+#     "Select the value of V3",
+#     -10.00, 10.00, step=0.1,
+#     key="V3",
+#     help="Select the value of V3"
+# )
 
 V4 = st.sidebar.number_input(
     "Select the value of V4",
@@ -90,6 +90,12 @@ V7 = st.sidebar.number_input(
     -10.00, 3.00, step=0.1,
     key="V7",
     help="Select the value of V7"
+)
+V9 = st.sidebar.number_input(
+    "Select the value of V9",
+    -14.00, 10.00, step=0.1,
+    key="V9",
+    help="Select the value of V9"
 )
 
 V10 = st.sidebar.number_input(
@@ -134,31 +140,29 @@ V17 = st.sidebar.number_input(
     help="Select the value of V17"
 )
 
-V27 = st.sidebar.number_input(
-    "Select the value of V27",
-    -1.00, 1.00, step=0.1,
-    key="V27",
-    help="Select the value of V27"
-)
+# V27 = st.sidebar.number_input(
+#     "Select the value of V27",
+#     -1.00, 1.00, step=0.1,
+#     key="V27",
+#     help="Select the value of V27"
+# )
 
 
 
 filename = "final_rf"
+# filename ="RF_model_s"
 model = pickle.load(open(filename, "rb"))
 
-
 my_dict = {
-    'V2': V2,
-    'V3': V3,
     'V4': V4,
     'V7': V7,
+    'V9': V9,
     'V10': V10,
     'V11': V11,
     'V12': V12, 
     'V14': V14,
     'V16': V16,
     'V17': V17, 
-    'V27': V27,
     
 }
 
